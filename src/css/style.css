@@ -4,15 +4,13 @@
 }
 
 body>header {
-    padding: 10px 20px;
-    margin: 0 auto;
+    padding: 20px;
     position: sticky;
     overflow: hidden;
     background-color: #000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
     top: 0;
 }
 
@@ -38,7 +36,7 @@ nav ul li a {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 7px;
+    padding: 0 7px;
     margin: 10px;
     border-radius: 5px;
     text-decoration: none;
