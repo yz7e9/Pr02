@@ -16,6 +16,11 @@ body>header {
     top: 0;
 }
 
+body>header a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Add Gradient */
 /* Reference: https://stackoverflow.com/questions/8384751/css-text-gradient */
 body>header span {
