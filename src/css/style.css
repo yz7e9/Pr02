@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body>header {
+    padding: 10px 20px;
+    margin: 0 auto;
+    position: sticky;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    top: 0;
+}
+
+/* Add Gradient */
+/* Reference: https://stackoverflow.com/questions/8384751/css-text-gradient */
+body>header span {
+    background: linear-gradient(90deg, rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 100%);
+    color: transparent;
+    background-clip: text;
+}
+
+nav ul li {
+    list-style-type: none;
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #b7ff3ba1;
+}
