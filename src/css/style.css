@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+/* Header of the webpage*/
 body>header {
     padding: 20px;
     position: sticky;
@@ -10,7 +11,7 @@ body>header {
     background-color: #000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     top: 0;
 }
 
@@ -36,8 +37,8 @@ nav ul li a {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 0 7px;
-    margin: 10px;
+    padding: 10px;
+    margin: 0 10px;
     border-radius: 5px;
     text-decoration: none;
 }
