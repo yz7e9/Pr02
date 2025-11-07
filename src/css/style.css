@@ -1,29 +1,49 @@
-* {
+:root {
+    --gradient-pink-to-cyan: linear-gradient(90deg, rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 100%);
+}
+body {
+    background-color: #000;
+    color: #fff;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+/* section {
+    border-bottom: 1px solid rgba(128, 128, 128, .5);
+} */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+html, body, ul, li {
     padding: 0;
     margin: 0;
 }
 
 /* Header of the webpage*/
-body>header {
-    padding: 20px;
+body>header, body>footer {
+    padding: 20px 100px;;
     position: sticky;
     overflow: hidden;
     background-color: #000;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     top: 0;
+    border-top: 1px solid rgba(128, 128, 128, .5);
+    border-bottom: 1px solid rgba(128, 128, 128, .5);
 }
-
-body>header a {
-    color: #fff;
-    text-decoration: none;
+body>header h1, body>footer h1 {
+    font-size: 1.17em;
 }
 
 /* Add Gradient */
 /* Reference: https://stackoverflow.com/questions/8384751/css-text-gradient */
-body>header span {
-    background: linear-gradient(90deg, rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 100%);
+body>header span, body>footer span  {
+    background: var(--gradient-pink-to-cyan);
     color: transparent;
     background-clip: text;
 }
@@ -38,11 +58,44 @@ nav ul li a {
     color: #fff;
     text-align: center;
     padding: 10px;
-    margin: 0 10px;
+    margin: 0 5px;
     border-radius: 5px;
     text-decoration: none;
 }
 
 nav ul li a:hover {
     background-color: #b7ff3ba1;
+}
+
+/* 1st Section */
+.homepage h2 {
+    font-size: 2em;
+}
+.homepage h2 span {
+    background: linear-gradient(90deg,rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 50%, rgba(182, 255, 59, 1) 100%);
+    color: transparent;
+    background-clip: text;
+}
+.homepage a {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 25px;
+}
+.homepage a.primary {
+    background: var(--gradient-pink-to-cyan);
+}
+.homepage a.secundary {
+    background: #b7ff3b;
+    color: #000;
+}
+
+/* Footer */
+body>footer {
+    padding-bottom: 30px;
+}
+body>footer nav {
+    margin-top: 10px;
+}
+body>footer p, body>footer address {
+    display: inline;
 }
