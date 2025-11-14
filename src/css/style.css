@@ -1,5 +1,6 @@
 :root {
     --gradient-pink-to-cyan: linear-gradient(90deg, rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 100%);
+    --gray-05: rgba(128, 128, 128, .5)
 }
 
 body {
@@ -8,16 +9,12 @@ body {
 }
 
 main {
-    /* display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    flex-wrap: wrap; */
     display: grid;
     justify-items: center;
 }
 
 /* section {
-    border-bottom: 1px solid rgba(128, 128, 128, .5);
+    border-bottom: 1px solid var(--gray-05);
 } */
 a {
     color: #fff;
@@ -40,8 +37,8 @@ body>header, body>footer {
     align-items: center;
     justify-content: space-between;
     top: 0;
-    border-top: 1px solid rgba(128, 128, 128, .5);
-    border-bottom: 1px solid rgba(128, 128, 128, .5);
+    border-top: 1px solid var(--gray-05);
+    border-bottom: 1px solid var(--gray-05);
 }
 
 body>header h1, body>footer h1 {
@@ -88,9 +85,8 @@ main section header h2 {
 .homepage {
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
     width: 80vw;
-    /* margin-top: 2rem; */
+    padding: 70px 0 80px 0;
 }
 
 .homepage img {
@@ -108,32 +104,51 @@ main section header h2 {
     background-clip: text;
 }
 
+/* Button border gradient animation */
+/* Reference: https://www.youtube.com/watch?v=PTVXnOrQoBQ */
 .homepage a {
     margin: 5px;
     padding: 10px;
+    background: #000;
     border: none;
-    border-radius: 25px;
+    border-radius: 1000px;
     position: relative;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
-/* .homepage a::after {
+
+.homepage a::after {
     content: '';
     position: absolute;
     height: 107%;
     width: 102%;
-    border-radius: 25px;
+    border-radius: 1000px;
     z-index: -1;
 }
+
 .homepage a.primary::after {
     background-image: linear-gradient(to right, #ff2ba6, #20e3ff);
-} */
-.homepage a.secundary {
-    color: #000;
 }
+
 .homepage a.secundary::after {
     background: #b7ff3b;
+}
+
+.homepage a:hover {
+    z-index: 0;
+}
+
+.homepage a.secundary:hover {
+    color: #000;
+}
+
+.tags p {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid var(--gray-05);
+    border-radius: 25px;
+    display: inline-flex;
 }
 
 /* Launches */
