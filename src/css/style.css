@@ -6,6 +6,7 @@
 body {
     background-color: #000;
     color: #fff;
+    font-family: Verdana, sans-serif;
 }
 
 main {
@@ -13,9 +14,6 @@ main {
     justify-items: center;
 }
 
-/* section {
-    border-bottom: 1px solid var(--gray-05);
-} */
 a {
     color: #fff;
     text-decoration: none;
@@ -39,6 +37,7 @@ body>header, body>footer {
     top: 0;
     border-top: 1px solid var(--gray-05);
     border-bottom: 1px solid var(--gray-05);
+    z-index: 1000;
 }
 
 body>header h1, body>footer h1 {
@@ -106,7 +105,7 @@ main section header h2 {
 
 /* Button border gradient animation */
 /* Reference: https://www.youtube.com/watch?v=PTVXnOrQoBQ */
-.homepage a {
+.mainBtn {
     margin: 5px;
     padding: 10px;
     background: #000;
@@ -118,7 +117,7 @@ main section header h2 {
     align-items: center;
 }
 
-.homepage a::after {
+.mainBtn::after {
     content: '';
     position: absolute;
     height: 107%;
@@ -127,23 +126,23 @@ main section header h2 {
     z-index: -1;
 }
 
-.homepage a.primary::after {
+.mainBtn.primary::after {
     background-image: linear-gradient(to right, #ff2ba6, #20e3ff);
 }
 
-.homepage a.secundary::after {
+.mainBtn.secondary::after {
     background: #b7ff3b;
 }
 
-.homepage a:hover {
+.mainBtn:hover {
     z-index: 0;
 }
 
-.homepage a.secundary:hover {
+.mainBtn.secondary:hover {
     color: #000;
 }
 
-.tags p {
+.homeTags p {
     margin: 5px;
     padding: 10px;
     border: 1px solid var(--gray-05);
@@ -153,9 +152,13 @@ main section header h2 {
 
 /* Launches */
 .launches {
-    background: #2A7B9B;
     background: linear-gradient(180deg, rgba(42, 123, 155, 1) 0%, rgba(0, 0, 0, 1) 100%);
     width: 100%;
+}
+
+.launches > div {
+    width: 80%;
+    margin: 10px auto;
 }
 
 .launches header {
@@ -165,10 +168,53 @@ main section header h2 {
     margin: 0 2rem;
 }
 
-.launches div {
+.launches header a {
+    padding: 10px;
+    border: 2px solid hsl(197, 57%, 57%);
+    background: linear-gradient(to right, hsl(197, 57%, 57%), rgb(42, 123, 155));
+    border-radius: 1000px;
+    margin-top: 5px;
+}
+
+.launches > div > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.launches article {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+    width: 15em;
+    margin: 10px;
+    background-color: #000;
+}
+
+.launches article:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.launches img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.launches article h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.launches article > div {
+    padding: 16px;
+}
+
+.launches article > div a {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 1000px;
+    margin-top: 5px;
+    display: inline-block;
 }
 
 /* Footer */
