@@ -70,7 +70,7 @@
 
 /* Launches */
 .launches {
-    background: linear-gradient(180deg, rgba(42, 123, 155, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(180deg, #1E616F 0%, #000 100%);
     width: 100%;
 }
 
@@ -88,8 +88,8 @@
 
 .launches header a {
     padding: 10px;
-    border: 2px solid hsl(197, 57%, 57%);
-    background: linear-gradient(to right, hsl(197, 57%, 57%), hsl(197, 57%, 37%));
+    border: 2px solid hsl(190, 57%, 48%);
+    background: linear-gradient(to right, hsl(190, 57%, 48%), #1E616F);
     border-radius: 1000px;
     margin-top: 5px;
 }
@@ -137,7 +137,7 @@
 
 /* Artist */
 .artist {
-    background: linear-gradient(180deg, #6A1A48 0%, #000000 100%);
+    background: linear-gradient(180deg, #6D1A4A 0%, #000000 100%);
     width: 100%;
 }
 
@@ -155,8 +155,8 @@
 
 .artist header a {
     padding: 10px;
-    border: 2px solid hsl(326, 61%, 46%);
-    background: linear-gradient(to right, hsl(326, 61%, 46%), hsl(326, 61%, 26%));
+    border: 2px solid hsl(325, 61%, 46%);
+    background: linear-gradient(to right, hsl(325, 61%, 46%), #6D1A4A);
     border-radius: 1000px;
     margin-top: 5px;
 }
@@ -168,4 +168,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.artist article {
+    display: inline-flex;
 }
