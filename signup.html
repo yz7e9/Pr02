@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SoundTecITB</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/signup.css">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html" title="Home">Sound<span>TecITB</span></a></h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#artist">Artistas</a></li>
+                <li><a href="./index.html#festivals">Eventos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#">Alta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form" id="form">
+            <header>
+                <h2>Registrarse</h2>
+            </header>
+            <form action="#" method="get">
+                <section class="personal_data">
+                    <div>
+                        <label for="name">Nombre: </label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="surname">Apellido: </label>
+                        <input type="text" name="surname" id="surname">
+                    </div>
+                    <div>
+                        <label for="gender">Género: </label>
+                        <input type="radio" name="gender" id="home">Hombre
+                        <input type="radio" name="gender" id="dona">Mujer
+                    </div>
+                    <div>
+                        <label for="email">Correo electronico: </label>
+                        <input type="email" name="email" id="email" placeholder="me@example.com" required>
+                    </div>
+                    <div>
+                        <label for="birth">Fecha de nacimiento: </label>
+                        <input type="date" name="birth" id="birth">
+                    </div>
+                </section>
+                <section class="tickets">
+                    <div>
+                        <label for="type">Tipo de entrada:</label>
+                        <select id="type" name="type" required>
+                            <option value="" selected>-- Seleccionar una entrada --</option>
+                            <option value="1-day">Pase de 1 día</option>
+                            <option value="2-day">Pase de 2 días</option>
+                            <option value="full">Pase completo para el festival</option>
+                            <option value="vip">Pase VIP</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="quantity">Cantidad de tickets: </label>
+                        <input type="range" name="quantity" id="quantity">
+                    </div>
+                </section>
+                <section>
+                    <label for="access">Necesidades de accesibilidad (opcional):</label>
+                    <textarea id="access" name="access" rows="3" placeholder="Introduzca los requisitos de accesibilidad, si los hubiera"></textarea>
+                </section>
+                <section>
+                    <label>
+                        <input type="checkbox" name="terms" required><p>I agree to the Terms & Conditions</p>
+                    </label>
+                </section>
+            </form>
+        </section>
+        <section class="contact" id="contact">
+            <header>
+                <h2>Contacta-nos</h2>
+            </header>
+            <form action="#" method="get">
+                <section class="personal_data">
+                    <div>
+                        <label for="name">Nombre: </label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="surname">Apellido: </label>
+                        <input type="text" name="surname" id="surname">
+                    </div>
+                    <div>
+                        <label for="email">Correo electronico: </label>
+                        <input type="email" name="email" id="email" placeholder="me@example.com" required>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <label for="message">Mensaje: </label>
+                        <textarea name="message" id="message" placeholder="Escriba aqui el mensaje que deseas enviar-nos."></textarea>
+                    </div>
+                </section>
+                <section>
+                    <label>
+                        <input type="checkbox" name="terms" required><p>I agree to the Terms & Conditions</p>
+                    </label>
+                </section>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div>
+            <h1><a href="./index.html" title="Home">Sound<span>TecITB</span></a></h1>
+            <p>&copy;&nbsp;2025 SoundTecITB ·&nbsp;<address>C/ Aiguablava, 123</address>&nbsp;·&nbsp;<address>Barcelona</address></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://instagram.com/">Instagram</a></li>
+                <li><a href="https://tiktok.com/">TikTok</a></li>
+                <li><a href="https://x.com/">X</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
