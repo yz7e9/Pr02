@@ -1,6 +1,10 @@
 :root {
     --gradient-pink-to-cyan: linear-gradient(90deg, rgba(255, 43, 166, 1) 0%, rgba(32, 227, 255, 1) 100%);
-    --gray-05: rgba(128, 128, 128, .5)
+    --mainbtn-primary-gradiant: linear-gradient(to right, #ff2ba6, #20e3ff);
+    --mainbtn-secondary-gradiant: #b7ff3b;
+    --gray-05: rgba(128, 128, 128, .5);
+    --darker-cyan: hsl(190, 57%, 28%);
+    --dark-cyan: hsl(190, 57%, 48%);
 }
 
 body {

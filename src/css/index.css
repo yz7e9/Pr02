@@ -45,11 +45,11 @@
 }
 
 .mainBtn.primary::after {
-    background-image: linear-gradient(to right, #ff2ba6, #20e3ff);
+    background-image: var(--mainbtn-primary-gradiant);
 }
 
 .mainBtn.secondary::after {
-    background: #b7ff3b;
+    background: var(--mainbtn-secondary-gradiant);
 }
 
 .mainBtn:hover {
@@ -68,39 +68,42 @@
     display: inline-flex;
 }
 
-/* Launches */
-.launches {
-    background: linear-gradient(180deg, #1E616F 0%, #000 100%);
+.releases header, .artist header, .festivals header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.releases header a, .artist header a, .festivals header p {
+    padding: 10px;
+    border-radius: 1000px;
+}
+
+/* releases */
+.releases {
+    background: linear-gradient(180deg, var(--darker-cyan) 0%, #000 100%);
     width: 100%;
 }
 
-.launches > div {
+.releases > div {
     width: 80%;
     margin: 10px auto;
 }
 
-.launches header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 2rem;
-}
-
-.launches header a {
-    padding: 10px;
+.releases header a {
     border: 2px solid hsl(190, 57%, 48%);
-    background: linear-gradient(to right, hsl(190, 57%, 48%), #1E616F);
-    border-radius: 1000px;
+    background: linear-gradient(to right, hsl(190, 57%, 48%), var(--darker-cyan));
     margin-top: 5px;
 }
 
-.launches > div > div {
+.releases > div > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.launches article {
+.releases article {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 15px;
@@ -109,25 +112,25 @@
     background-color: #000;
 }
 
-.launches article:hover {
+.releases article:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.launches img {
+.releases img {
     border-radius: 15px 15px 0 0;
     width: 100%;
 }
 
-.launches article h3 {
+.releases article h3 {
     padding: 0;
     margin: 0;
 }
 
-.launches article > div {
+.releases article > div {
     padding: 16px;
 }
 
-.launches article > div a {
+.releases article > div a {
     padding: 10px;
     border: 1px solid grey;
     border-radius: 1000px;
@@ -146,18 +149,9 @@
     margin: 10px auto;
 }
 
-.artist header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 2rem;
-}
-
 .artist header a {
-    padding: 10px;
     border: 2px solid hsl(325, 61%, 46%);
     background: linear-gradient(to right, hsl(325, 61%, 46%), #6D1A4A);
-    border-radius: 1000px;
     margin-top: 5px;
 }
 .artist article {
@@ -187,4 +181,81 @@
 
 .artist article div {
     margin: 0 10px;
+}
+
+/* Festivals */
+.festivals {
+    background: linear-gradient(180deg, #2F3E1C 0%, #000 100%);
+    width: 100%;
+}
+
+.festivals > div {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.festivals header h2 {
+    display: inline;
+    background-image: var(--gradient-pink-to-cyan);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: bottom;
+}
+
+.festivals header p {
+    border: 2px solid hsl(84, 48%, 28%);
+    background: linear-gradient(to right, hsl(84, 48%, 28%), #2F3E1C);
+}
+
+.festivals > div > div, .festivalMainSection {
+    display: flex;
+}
+
+.festivals article {
+    margin: 10px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.festivalMainSection {
+    background-color: #648C28;
+    height: fit-content;
+    border-radius: 10px;
+    width: 75%;
+}
+
+.festivalMainSection article img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: inherit;
+}
+
+.festivalMainSection article div {
+    margin: 10px;
+}
+
+.festivalMainSection article div span {
+    background-color: #5C1F45;
+    border-radius: 1000px;
+    padding: 8px 10px;
+    display: inline-block;
+    margin: 5px 0;
+}
+.festivals aside {
+    width: 25%;
+}
+
+.festivals aside img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.festivals aside div {
+    padding: 10px;
+}
+
+.festivals aside div a {
+    border: 1px solid gray;
 }
