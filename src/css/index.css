@@ -1,3 +1,32 @@
+.festivals header h2, .top10 header h2 {
+    display: inline;
+    background-image: var(--gradient-pink-to-cyan);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: bottom;
+}
+
+.releases header, .artist header, .festivals header, .top10 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.releases header a, .artist header a, .festivals header p, .top10 header a {
+    padding: 10px;
+    border-radius: 1000px;
+}
+
+.releases, .artist, .festivals, .top10 {
+    width: 100%;
+}
+
+.releases > div, .artist > div, .festivals > div, .top10 > div {
+    width: 80%;
+    margin: 10px auto;
+}
+
 /* 1st Section */
 .homepage {
     display: flex;
@@ -68,27 +97,9 @@
     display: inline-flex;
 }
 
-.releases header, .artist header, .festivals header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 1rem;
-}
-
-.releases header a, .artist header a, .festivals header p {
-    padding: 10px;
-    border-radius: 1000px;
-}
-
 /* releases */
 .releases {
     background: linear-gradient(180deg, var(--darker-cyan) 0%, #000 100%);
-    width: 100%;
-}
-
-.releases > div {
-    width: 80%;
-    margin: 10px auto;
 }
 
 .releases header a {
@@ -141,12 +152,6 @@
 /* Artist */
 .artist {
     background: linear-gradient(180deg, #6D1A4A 0%, #000000 100%);
-    width: 100%;
-}
-
-.artist > div {
-    width: 80%;
-    margin: 10px auto;
 }
 
 .artist header a {
@@ -186,20 +191,6 @@
 /* Festivals */
 .festivals {
     background: linear-gradient(180deg, #2F3E1C 0%, #000 100%);
-    width: 100%;
-}
-
-.festivals > div {
-    width: 80%;
-    margin: 10px auto;
-}
-
-.festivals header h2 {
-    display: inline;
-    background-image: var(--gradient-pink-to-cyan);
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-    background-position: bottom;
 }
 
 .festivals header p {
@@ -258,4 +249,17 @@
 
 .festivals aside div a {
     border: 1px solid gray;
+}
+
+/* Top 10 */
+.top10 {
+    margin-bottom: 2rem;
+}
+.top10 header a {
+    border: 2px solid grey;
+}
+.top10 ol {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
 }
