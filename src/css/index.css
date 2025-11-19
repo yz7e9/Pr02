@@ -263,3 +263,7 @@
     grid-template-rows: repeat(5, auto);
     grid-auto-flow: column;
 }
+
+.top10 ol li p {
+    margin: 10px;
+}
