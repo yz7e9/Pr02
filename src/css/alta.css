@@ -92,6 +92,10 @@ hr {
     align-items: center;
 }
 
+.signup form fieldset input:first-of-type, .contact form fieldset input:first-of-type {
+    margin-top: 0;
+}
+
 .signup form .other div {
     display: grid;
 }
