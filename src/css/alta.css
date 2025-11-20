@@ -1,0 +1,112 @@
+fieldset {
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+fieldset:not(.other) {
+    margin: 2rem 0;
+}
+
+fieldset.other, fieldset.message {
+    margin-bottom: 10px;
+}
+
+label {
+    min-width: 48%;
+    margin-bottom: 10px;
+}
+
+textarea {
+    min-width: 45%;
+    height: 150px;
+    border: none;
+    outline: none;
+}
+
+input[type=submit] {
+    width: 100%;
+    background: var(--mainbtn-secondary-gradiant);
+    color: black;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+input:required:not([type=checkbox]), select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #0077ff;
+    outline: none;
+    font-size: medium;
+    background-color: #000;
+    color: #fff;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(100%) brightness(100%) contrast(100%);
+}
+
+input[type=radio] {
+    width: auto;
+}
+
+input[type=checkbox] {
+    width: 14px;
+    height: 14px;
+}
+
+input:required:not(:placeholder-shown, [type=date]):invalid {
+    border-bottom: 1px solid red;
+}
+
+input:required:valid {
+    border-bottom: 1px solid green;
+}
+
+hr {
+    width: 75%;
+    height: 8px;
+    background-image: var(--gradient-pink-to-cyan);
+    border: 0;
+    height: 1px;
+}
+
+.signup, .contact {
+    margin: 1rem;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.signup header, .contact header {
+    margin: 20px 0;
+}
+
+.signup .gender {
+    display: flex;
+    align-items: center;
+}
+
+.signup form .other div {
+    display: grid;
+}
+
+.signup form .other textarea, .contact form textarea {
+    width: 99%;
+    min-height: fit-content;
+    max-height: 30rem;
+    resize: none;
+    overflow-y: scroll;
+    background-color: black;
+    color: white;
+    font-size: larger;
+}
+
+.terms {
+    padding: 10px;
+}

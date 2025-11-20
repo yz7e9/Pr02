@@ -99,12 +99,12 @@
 
 /* releases */
 .releases {
-    background: linear-gradient(180deg, var(--darker-cyan) 0%, #000 100%);
+    background: linear-gradient(180deg, hsl(190, 57%, 28%) 0%, #000 100%);
 }
 
 .releases header a {
     border: 2px solid hsl(190, 57%, 48%);
-    background: linear-gradient(to right, hsl(190, 57%, 48%), var(--darker-cyan));
+    background: linear-gradient(to right, hsl(190, 57%, 48%), hsl(190, 57%, 28%));
     margin-top: 5px;
 }
 
@@ -117,7 +117,7 @@
 .releases article {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 15px;
+    border-radius: 1rem;
     width: 15em;
     margin: 10px;
     background-color: #000;
@@ -128,7 +128,7 @@
 }
 
 .releases img {
-    border-radius: 15px 15px 0 0;
+    border-radius: 1rem 1rem 0 0;
     width: 100%;
 }
 

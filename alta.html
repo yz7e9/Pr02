@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta - SoundTecITB</title>
     <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/signup.css">
+    <link rel="stylesheet" href="./src/css/alta.css">
     <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
@@ -32,33 +32,28 @@
                 <h2>Dar-se de alta</h2>
             </header>
             <form action="#" method="get" oninput="quantitySignupOutput.value=parseInt(quantitySignup.value)">
-                <fieldset>
-                    <legend>Datos Personales:</legend>
-                    <div>
-                        <label for="nameSignup">Nombre: </label>
-                        <input type="text" name="nameSignup" required>
-                    </div>
-                    <div>
-                        <label for="surnameSignup">Apellido: </label>
-                        <input type="text" name="surnameSignup">
-                    </div>
-                    <div>
+                <fieldset class="personalData">
+                    <legend>Datos Personales</legend>
+                    <input type="text" name="nameSignup" placeholder="Nombre" required>
+                    <input type="text" name="surnameSignup" placeholder="Apellido" required>
+                    <div class="gender">
                         <label for="genderSignup">Género: </label>
-                        <input type="radio" name="genderSignup">Hombre
-                        <input type="radio" name="genderSignup">Mujer
-                        <input type="radio" name="genderSignup">Otros
+                        <input type="radio" name="genderSignup" required>Hombre
+                        <input type="radio" name="genderSignup" required>Mujer
+                        <input type="radio" name="genderSignup" required>Otros
                     </div>
-                    <div>
-                        <label for="emailSignup">Correo electronico: </label>
-                        <input type="email" name="emailSignup" placeholder="me@example.com" required>
-                    </div>
+                    <input type="email" name="emailSignup" placeholder="me@example.com" required>
                     <div>
                         <label for="birthSignup">Fecha de nacimiento: </label>
-                        <input type="date" name="birthSignup">
+                        <input type="date" name="birthSignup" required>
                     </div>
                 </fieldset>
                 <fieldset class="tickets">
                     <legend>Entradas</legend>
+                    <div>
+                        <label for="dateSignup">Fecha de la entrada: </label>
+                        <input type="date" name="dateSignup" required>
+                    </div>
                     <div>
                         <label for="typeSignup">Tipo de entrada: </label>
                         <select id="typeSignup" name="typeSignup" required>
@@ -72,21 +67,21 @@
                     <div>
                         <label for="quantitySignup">Cantidad de tickets: </label>
                         <input type="range" name="quantitySignup" id="quantitySignup" min="1" max="20" value="1">
-                        <output name="quantitySignupOutput" for="quantitySignup"></output>
+                        <output name="quantitySignupOutput" for="quantitySignup">1</output>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset class="other">
                     <legend>Otros</legend>
                     <div>
                         <label for="accessSignup">Necesidades de accesibilidad (opcional):</label>
                         <textarea id="accessSignup" name="accessSignup" rows="3" placeholder="Introduzca los requisitos de accesibilidad, si los hubiera"></textarea>
                     </div>
                 </fieldset>
-                <div>
+                <div class="terms">
                     <input type="checkbox" name="termsSignup" id="termsSignup" required>
                     <label for="termsSignup">Acepto los Términos y Condiciones</label>
                 </div>
-                <input type="submit" value="Dar-se de alta">
+                <input type="submit" value="Dar-se de alta" class="signupBtn">
             </form>
         </section>
         <hr>
@@ -95,26 +90,17 @@
                 <h2>Contacta-nos</h2>
             </header>
             <form action="#" method="get">
-                <fieldset>
-                    <legend>Datos Personales:</legend>
-                    <div>
-                        <label for="nameContact">Nombre: </label>
-                        <input type="text" name="nameContact" id="nameContact" required>
-                    </div>
-                    <div>
-                        <label for="surnameContact">Apellido: </label>
-                        <input type="text" name="surnameContact" id="surnameContact" required>
-                    </div>
-                    <div>
-                        <label for="emailContact">Correo electronico: </label>
-                        <input type="email" name="emailContact" id="emailContact" placeholder="me@example.com" required>
-                    </div>
+                <fieldset class="personalData">
+                    <legend>Datos Personales</legend>
+                    <input type="text" name="nameContact" id="nameContact" placeholder="Nombre" required>
+                    <input type="text" name="surnameContact" id="surnameContact" placeholder="Apellido" required>
+                    <input type="email" name="emailContact" id="emailContact" placeholder="me@example.com" required>
                 </fieldset>
-                <fieldset>
+                <fieldset class="message">
                     <legend>Mensaje</legend>
                     <textarea name="messageContact" id="messageContact" placeholder="Escriba aqui el mensaje que deseas enviar-nos." required></textarea>
                 </fieldset>
-                <div>
+                <div class="terms">
                     <input type="checkbox" name="termsContact" id="termsContact" required>
                     <label for="termsContact">Acepto los Términos y Condiciones</label>
                 </div>

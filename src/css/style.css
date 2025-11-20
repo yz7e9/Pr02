@@ -3,8 +3,6 @@
     --mainbtn-primary-gradiant: linear-gradient(to right, #ff2ba6, #20e3ff);
     --mainbtn-secondary-gradiant: #b7ff3b;
     --gray-05: rgba(128, 128, 128, .5);
-    --darker-cyan: hsl(190, 57%, 28%);
-    --dark-cyan: hsl(190, 57%, 48%);
 }
 
 body {
@@ -72,7 +70,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #b7ff3ba1;
+    background-color: rgba(183, 255, 59, 0.631);
 }
 
 /* Reference: https://stackoverflow.com/questions/44147872/linear-gradient-underline-for-hyperlink */
