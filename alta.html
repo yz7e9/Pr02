@@ -27,39 +27,42 @@
         </nav>
     </header>
     <main>
-        <section class="form" id="form">
+        <section class="signup">
             <header>
                 <h2>Dar-se de alta</h2>
             </header>
-            <form action="#" method="get">
-                <section class="personal_data">
+            <form action="#" method="get" oninput="quantitySignupOutput.value=parseInt(quantitySignup.value)">
+                <fieldset>
+                    <legend>Datos Personales:</legend>
                     <div>
-                        <label for="name">Nombre: </label>
-                        <input type="text" name="name" id="name" required>
+                        <label for="nameSignup">Nombre: </label>
+                        <input type="text" name="nameSignup" required>
                     </div>
                     <div>
-                        <label for="surname">Apellido: </label>
-                        <input type="text" name="surname" id="surname">
+                        <label for="surnameSignup">Apellido: </label>
+                        <input type="text" name="surnameSignup">
                     </div>
                     <div>
-                        <label for="gender">Género: </label>
-                        <input type="radio" name="gender" id="home">Hombre
-                        <input type="radio" name="gender" id="dona">Mujer
+                        <label for="genderSignup">Género: </label>
+                        <input type="radio" name="genderSignup">Hombre
+                        <input type="radio" name="genderSignup">Mujer
+                        <input type="radio" name="genderSignup">Otros
                     </div>
                     <div>
-                        <label for="email">Correo electronico: </label>
-                        <input type="email" name="email" id="email" placeholder="me@example.com" required>
+                        <label for="emailSignup">Correo electronico: </label>
+                        <input type="email" name="emailSignup" placeholder="me@example.com" required>
                     </div>
                     <div>
-                        <label for="birth">Fecha de nacimiento: </label>
-                        <input type="date" name="birth" id="birth">
+                        <label for="birthSignup">Fecha de nacimiento: </label>
+                        <input type="date" name="birthSignup">
                     </div>
-                </section>
-                <section class="tickets">
+                </fieldset>
+                <fieldset class="tickets">
+                    <legend>Entradas</legend>
                     <div>
-                        <label for="type">Tipo de entrada:</label>
-                        <select id="type" name="type" required>
-                            <option value="" selected>-- Seleccionar una entrada --</option>
+                        <label for="typeSignup">Tipo de entrada: </label>
+                        <select id="typeSignup" name="typeSignup" required>
+                            <option value="" selected disabled>-- Seleccionar una entrada --</option>
                             <option value="1-day">Pase de 1 día</option>
                             <option value="2-day">Pase de 2 días</option>
                             <option value="full">Pase completo para el festival</option>
@@ -67,51 +70,55 @@
                         </select>
                     </div>
                     <div>
-                        <label for="quantity">Cantidad de tickets: </label>
-                        <input type="range" name="quantity" id="quantity">
+                        <label for="quantitySignup">Cantidad de tickets: </label>
+                        <input type="range" name="quantitySignup" id="quantitySignup" min="1" max="20" value="1">
+                        <output name="quantitySignupOutput" for="quantitySignup"></output>
                     </div>
-                </section>
-                <section>
-                    <label for="access">Necesidades de accesibilidad (opcional):</label>
-                    <textarea id="access" name="access" rows="3" placeholder="Introduzca los requisitos de accesibilidad, si los hubiera"></textarea>
-                </section>
-                <section>
-                    <label>
-                        <input type="checkbox" name="terms" required><p>I agree to the Terms & Conditions</p>
-                    </label>
-                </section>
+                </fieldset>
+                <fieldset>
+                    <legend>Otros</legend>
+                    <div>
+                        <label for="accessSignup">Necesidades de accesibilidad (opcional):</label>
+                        <textarea id="accessSignup" name="accessSignup" rows="3" placeholder="Introduzca los requisitos de accesibilidad, si los hubiera"></textarea>
+                    </div>
+                </fieldset>
+                <div>
+                    <input type="checkbox" name="termsSignup" id="termsSignup" required>
+                    <label for="termsSignup">Acepto los Términos y Condiciones</label>
+                </div>
+                <input type="submit" value="Dar-se de alta">
             </form>
         </section>
+        <hr>
         <section class="contact" id="contact">
             <header>
                 <h2>Contacta-nos</h2>
             </header>
             <form action="#" method="get">
-                <section class="personal_data">
+                <fieldset>
+                    <legend>Datos Personales:</legend>
                     <div>
-                        <label for="name">Nombre: </label>
-                        <input type="text" name="name" id="name" required>
+                        <label for="nameContact">Nombre: </label>
+                        <input type="text" name="nameContact" id="nameContact" required>
                     </div>
                     <div>
-                        <label for="surname">Apellido: </label>
-                        <input type="text" name="surname" id="surname">
+                        <label for="surnameContact">Apellido: </label>
+                        <input type="text" name="surnameContact" id="surnameContact" required>
                     </div>
                     <div>
-                        <label for="email">Correo electronico: </label>
-                        <input type="email" name="email" id="email" placeholder="me@example.com" required>
+                        <label for="emailContact">Correo electronico: </label>
+                        <input type="email" name="emailContact" id="emailContact" placeholder="me@example.com" required>
                     </div>
-                </section>
-                <section>
-                    <div>
-                        <label for="message">Mensaje: </label>
-                        <textarea name="message" id="message" placeholder="Escriba aqui el mensaje que deseas enviar-nos."></textarea>
-                    </div>
-                </section>
-                <section>
-                    <label>
-                        <input type="checkbox" name="terms" required><p>I agree to the Terms & Conditions</p>
-                    </label>
-                </section>
+                </fieldset>
+                <fieldset>
+                    <legend>Mensaje</legend>
+                    <textarea name="messageContact" id="messageContact" placeholder="Escriba aqui el mensaje que deseas enviar-nos." required></textarea>
+                </fieldset>
+                <div>
+                    <input type="checkbox" name="termsContact" id="termsContact" required>
+                    <label for="termsContact">Acepto los Términos y Condiciones</label>
+                </div>
+                <input type="submit" value="Enviar">
             </form>
         </section>
     </main>
