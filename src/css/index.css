@@ -177,7 +177,7 @@
     justify-content: space-around;
 }
 
-.artist article {
+.artist article a {
     display: inline-flex;
     align-items: center;
     border-radius: 10px;
@@ -222,6 +222,11 @@
     height: fit-content;
     border-radius: 10px;
     width: 75%;
+}
+
+.festivalMainSection article a {
+    width: 100%;
+    display: block;
 }
 
 .festivalMainSection article img {
