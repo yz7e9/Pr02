@@ -90,11 +90,11 @@
     height: 150px;
     border-radius: 50%;
     border: solid 1px #d9a388;
-    background: url('/assets/img/releases/M83-Midnight_City.png') no-repeat center center;
+    background: url('../../assets/img/releases/M83-Midnight_City.png') no-repeat center center;
     background-size: cover;
 }
 
-.metadata ul {
+.release ul {
     list-style-type: none;
 }
 
