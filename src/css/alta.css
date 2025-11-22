@@ -34,7 +34,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input:required:not([type=checkbox]), select {
+input:required:not([type=checkbox], [type="radio"]), select {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -51,8 +51,23 @@ input[type=date]::-webkit-calendar-picker-indicator {
     filter: invert(100%) brightness(100%) contrast(100%);
 }
 
-input[type=radio] {
-    width: auto;
+input[type="radio"] {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+}
+
+input[type="radio"]:checked {
+  border: 6px solid white;
 }
 
 input[type=checkbox] {
@@ -60,11 +75,11 @@ input[type=checkbox] {
     height: 14px;
 }
 
-input:required:not(:placeholder-shown, [type=date]):invalid {
+input:required:not(:placeholder-shown, [type=date], [type="radio"]):invalid {
     border-bottom: 1px solid red;
 }
 
-input:required:valid {
+input:required:not([type="radio"]):valid {
     border-bottom: 1px solid green;
 }
 
@@ -87,11 +102,6 @@ hr {
     margin: 20px 0;
 }
 
-.signup .gender {
-    display: flex;
-    align-items: center;
-}
-
 .signup form fieldset input:first-of-type, .contact form fieldset input:first-of-type {
     margin-top: 0;
 }
@@ -109,6 +119,26 @@ hr {
     background-color: black;
     color: white;
     font-size: larger;
+}
+
+.signup .gender {
+    display: inline-flex;
+    align-items: baseline;
+    width: 100%;
+}
+
+.gender > div {
+    display: inline-flex;
+    width: 100%;
+}
+
+.gender > div > div {
+    display: inline-flex;
+    margin: 0 auto;
+}
+
+.gender label {
+    min-width: unset;
 }
 
 .terms {

@@ -37,22 +37,29 @@
                     <input type="text" name="nameSignup" placeholder="Nombre" required>
                     <input type="text" name="surnameSignup" placeholder="Apellido" required>
                     <div class="gender">
-                        <label for="genderSignup">Género: </label>
-                        <input type="radio" name="genderSignup" required>Hombre
-                        <input type="radio" name="genderSignup" required>Mujer
-                        <input type="radio" name="genderSignup" required>Otros
+                        <p>Género: </p>
+                        <div>
+                            <div>
+                                <input type="radio" name="genderSignup" id="man" value="man" required>
+                                <label for="man">Hombre</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="genderSignup" id="woman" value="woman" required>
+                                <label for="woman">Mujer</label>
+                            </div>
+                        </div>
                     </div>
                     <input type="email" name="emailSignup" placeholder="me@example.com" required>
                     <div>
                         <label for="birthSignup">Fecha de nacimiento: </label>
-                        <input type="date" name="birthSignup" required>
+                        <input type="date" name="birthSignup" id="birthSignup" required>
                     </div>
                 </fieldset>
                 <fieldset class="tickets">
                     <legend>Entradas</legend>
                     <div>
                         <label for="dateSignup">Fecha de la entrada: </label>
-                        <input type="date" name="dateSignup" required>
+                        <input type="date" name="dateSignup" id="dateSignup" required>
                     </div>
                     <div>
                         <label for="typeSignup">Tipo de entrada: </label>
@@ -72,10 +79,7 @@
                 </fieldset>
                 <fieldset class="other">
                     <legend>Otros</legend>
-                    <div>
-                        <label for="accessSignup">Necesidades de accesibilidad (opcional):</label>
-                        <textarea id="accessSignup" name="accessSignup" rows="3" placeholder="Introduzca los requisitos de accesibilidad, si los hubiera"></textarea>
-                    </div>
+                    <textarea id="otherSignup" name="otherSignup" rows="3" placeholder="Introduzca los otros requisitos, si los hubiera"></textarea>
                 </fieldset>
                 <div class="terms">
                     <input type="checkbox" name="termsSignup" id="termsSignup" required>
