@@ -14,6 +14,45 @@ body {
     background-color: #000;
     color: #fff;
     font-family: Verdana, sans-serif;
+
+    /* Header of the webpage*/
+    & > header, & > footer {
+        padding: 20px 100px;
+        position: sticky;
+        overflow: hidden;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        border-top: 1px solid var(--gray-05);
+        border-bottom: 1px solid var(--gray-05);
+        z-index: 1000;
+
+        h1 {
+            font-size: 1.17em;
+        }
+
+        /* Add Gradient */
+        /* Reference: https://stackoverflow.com/questions/8384751/css-text-gradient */
+        span {
+            background: var(--gradient-pink-to-cyan);
+            color: transparent;
+            background-clip: text;
+        }
+    }
+
+    /* Footer */
+    & > footer {
+        padding-bottom: 30px;
+
+        nav {
+            margin-top: 10px;
+        }
+        p, address {
+            display: inline;
+        }
+    }
 }
 
 main {
@@ -31,51 +70,23 @@ img {
     width: 100%;
 }
 
-/* Header of the webpage*/
-body>header, body>footer {
-    padding: 20px 100px;
-    ;
-    position: sticky;
-    overflow: hidden;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    border-top: 1px solid var(--gray-05);
-    border-bottom: 1px solid var(--gray-05);
-    z-index: 1000;
-}
-
-body>header h1, body>footer h1 {
-    font-size: 1.17em;
-}
-
-/* Add Gradient */
-/* Reference: https://stackoverflow.com/questions/8384751/css-text-gradient */
-body>header span, body>footer span {
-    background: var(--gradient-pink-to-cyan);
-    color: transparent;
-    background-clip: text;
-}
-
 nav ul li {
     list-style-type: none;
     float: left;
-}
 
-nav ul li a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin: 0 5px;
-    border-radius: 5px;
-    text-decoration: none;
-}
+    a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 5px;
+        text-decoration: none;
 
-nav ul li a:hover {
-    background-color: rgba(183, 255, 59, 0.631);
+        &:hover {
+            background-color: rgba(183, 255, 59, 0.631);
+        }
+    }
 }
 
 /* Reference: https://stackoverflow.com/questions/44147872/linear-gradient-underline-for-hyperlink */
@@ -85,17 +96,4 @@ main section header h2 {
     background-repeat: no-repeat;
     background-size: 100% 2px;
     background-position: bottom;
-}
-
-/* Footer */
-body>footer {
-    padding-bottom: 30px;
-}
-
-body>footer nav {
-    margin-top: 10px;
-}
-
-body>footer p, body>footer address {
-    display: inline;
 }
