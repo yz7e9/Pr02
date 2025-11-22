@@ -28,6 +28,7 @@ a {
 
 img {
     user-select: none;
+    width: 100%;
 }
 
 /* Header of the webpage*/

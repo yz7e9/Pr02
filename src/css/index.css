@@ -137,7 +137,6 @@
 
 .releases img {
     border-radius: 1rem 1rem 0 0;
-    width: 100%;
 }
 
 .releases article h3 {
@@ -251,7 +250,6 @@
 }
 
 .festivals aside img {
-    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
